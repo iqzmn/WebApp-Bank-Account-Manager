@@ -1,5 +1,5 @@
 # WebApp-Bank-Account-Manager
-Web application where you can create and control finance accounts as by user or admin role.
+Simple web application where you can create and control finance accounts as by user or admin role.
 
 ###### Used technologies:
 - JDK 10
@@ -13,6 +13,12 @@ Web application where you can create and control finance accounts as by user or 
 - WEB: JSP, Bootstrap 4, jQuery
 
 ###### Screenshots:
+
+![login](https://github.com/Qzmin/WebApp-Bank-Account-Manager/blob/master/data/login.png)
+![admin](https://github.com/Qzmin/WebApp-Bank-Account-Manager/blob/master/data/admin.png)
+![profile](https://github.com/Qzmin/WebApp-Bank-Account-Manager/blob/master/data/profile.png)
+![accounts](https://github.com/Qzmin/WebApp-Bank-Account-Manager/blob/master/data/accounts.png)
+![handle](https://github.com/Qzmin/WebApp-Bank-Account-Manager/blob/master/data/handle.png)
 
 
 ###### Tables to create:
