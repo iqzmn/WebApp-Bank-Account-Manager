@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="flip form-container">
+
+    <input id="flip-form-checkbox-id" type="checkbox">
+
+    <div class="flip__side front">
+
+        <form class="form form--sign-in" action="" name="form--sign-in">
+
+            <h4 class="form__title">login</h4>
+            <label class="field">
+                <span class="caption"><i class="fa fa-user">&nbsp;</i>Username or E-mail </span>
+                <input class="field_input" type="text" required = "required" title="Enter your username or e-mail">
+            </label>
+
+            <label class="field">
+                <span class="caption"><i class="fa fa-lock">&nbsp;</i>Password</span>
+                <input class="field_input" type="password" required = "required" title="Enter your password">
+            </label>
+
+            <div class="form__buttons">
+                <div class="options-block">
+                    <label for="flip-form-checkbox-id">No account yet?</label>
+                </div>
+                <div class="buttons-block">
+                    <input type="submit" value="Login">
+                    <input type="button" onclick="location.href='http://google.com';" value="Admin area" />
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="flip__side back">
+        <form action="saveUser" class="form form--sign-up"  name="form--sign-up" method="post" modelAttribute="user">
+            <h4 class="form__title">registration</h4>
+
+            <label class="field">
+                <span class="caption"><i class="fa fa-user">&nbsp;</i>User Name</span>
+                <input class="field_input" type="text"  required="required" title="Enter your username" placeholder="username" path="name"/>
+            </label>
+
+            <label class="field">
+                <span class="caption"><i class="fa fa-lock">&nbsp;</i>Password</span>
+                <input class="field_input" type="password" required="required" title="Enter your password" placeholder="******" path="password"/>
+            </label>
+
+            <label class="field">
+                <span class="caption"><i class="fa fa-envelope">&nbsp;</i>E-mail</span>
+                <input class="field_input" type="email" required="required" title="Enter your e-mail" placeholder="user@example.com" path="email"/>
+            </label>
+
+            <label class="field">
+                <span class="caption"><i class="fa fa-phone">&nbsp;</i>Phone</span>
+                <input class="field_input" type="tel" placeholder="+7-999-999-99-99" title="Enter phone number. It's optional" path="telephone"/>
+            </label>
+
+            <div class="form__buttons">
+                <div class="options-block">
+                    <label for="flip-form-checkbox-id">Already registered?</label>
+                </div>
+                <div class="buttons-block">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Reset">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

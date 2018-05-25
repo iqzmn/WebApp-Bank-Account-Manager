@@ -1,0 +1,257 @@
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    font: 62.5% "Segoe UI", Arial, sans-serif;
+    background: #484848;
+}
+
+.flip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    -webkit-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.flip__side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.7s;
+    -webkit-transition: -webkit-transform .7s;
+    transition: -webkit-transform .7s;
+    transition: transform .7s;
+    transition: transform .7s, -webkit-transform .7s;
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+    -webkit-box-shadow: 0 0 1px transparent;
+    box-shadow: 0 0 1px transparent;
+}
+.front {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.back {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+#flip-form-id {
+    position: absolute;
+    display: none;
+}
+#flip-form-id:checked ~ .front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+#flip-form-id:checked ~ .back {
+    -webkit-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+}
+.form-container {
+    float: left;
+    width: 30em;
+    min-height: 30em;
+    margin: 0px 0px 0;
+    font-size: 1.4em;
+}
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: .1em;
+    color: #ccc;
+    background: #2d2d30;
+}
+.form input {
+    border: 1px solid #5d5d5d;
+    color: #ccc;
+    background: #30303a;
+}
+.form input:focus {
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #0097fb;
+    -webkit-box-shadow: 0 0 4px #0097fb;
+    box-shadow: 0 0 4px #0097fb;
+}
+.form input:hover:not(:focus) {
+    outline: none;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 4px #5d5d5d;
+    box-shadow: 0 0 4px #5d5d5d;
+}
+.form__title {
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: normal;
+}
+.field {
+    display: block;
+    margin: 0 2.1429em 1em;
+    line-height: 2.5;
+}
+
+.back .field {
+    margin: 0 2.1429em 2em;
+}
+.caption {
+    display: block;
+}
+.caption.fa {
+    margin-right: .5em;
+}
+.caption:first-letter {
+    text-transform: uppercase;
+}
+.field_input {
+    display: block;
+    width: 100%;
+    height: 1.7857em;
+    padding: 0 .5em;
+}
+.form__buttons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3.9286em;
+    padding: 1em 2.1429em;
+    background: #252526;
+}
+.form__buttons:before,
+.form__buttons:after {
+    content: "";
+    display: table;
+}
+.form__buttons:after {
+    clear: both;
+}
+.form__buttons .buttons-block {
+    float: right;
+}
+.form__buttons .buttons-block input {
+    background: none;
+    min-width: 7.14em;
+    padding: .2em 0 .3em;
+    margin: 0 .12em;
+    text-align: center;
+}
+.form__buttons .options-block {
+    float: left;
+}
+.form__buttons .options-block label:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.has-error{
+    color:red;
+}
+
+.logout-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    text-align: center;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.login-failed {
+    color: darkred;
+    background-color: #ecbbb6;
+    text-align: center;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+input[type="checkbox"], input[type="radio"]{
+    position: inherit;
+    right: 9000px;
+    margin: 0 5px 0 0;
+}
+
+/*Check box*/
+/*input[type="checkbox"] + .label-text:before{*/
+    /*content: "\f096";*/
+    /*font-family: "FontAwesome";*/
+    /*speak: none;*/
+    /*font-style: normal;*/
+    /*font-weight: normal;*/
+    /*font-variant: normal;*/
+    /*text-transform: none;*/
+    /*line-height: 1;*/
+    /*-webkit-font-smoothing:antialiased;*/
+    /*width: 1em;*/
+    /*display: inline-block;*/
+    /*margin-right: 5px;*/
+/*}*/
+
+/*input[type="checkbox"]:checked + .label-text:before{*/
+    /*content: "\f14a";*/
+    /*color: #2980b9;*/
+    /*animation: effect 250ms ease-in;*/
+/*}*/
+
+/*input[type="checkbox"]:disabled + .label-text{*/
+    /*color: #aaa;*/
+/*}*/
+
+/*input[type="checkbox"]:disabled + .label-text:before{*/
+    /*content: "\f0c8";*/
+    /*color: #ccc;*/
+/*}*/
+
+/*Radio box*/
+input[type="radio"] + .label-text:before{
+    content: "\f10c";
+    font-family: "FontAwesome";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing:antialiased;
+    width: 1em;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+input[type="radio"]:checked + .label-text:before{
+    content: "\f192";
+    color: #8e44ad;
+    animation: effect 250ms ease-in;
+}
+
+input[type="radio"]:disabled + .label-text{
+    color: #aaa;
+}
+
+input[type="radio"]:disabled + .label-text:before{
+    content: "\f111";
+    color: #ccc;
+}
+
+@keyframes effect{
+    0%{transform: scale(0);}
+    25%{transform: scale(1.3);}
+    75%{transform: scale(1.4);}
+    100%{transform: scale(1);}
+}
+
+.my_form{
+    display: block;
+    width: 200px;
+    height: 50px;
+}
