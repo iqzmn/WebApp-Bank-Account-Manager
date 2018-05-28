@@ -177,7 +177,7 @@
                                 </div>
                             </div>
                             <div class="col col-md-4">
-                                <a style="width:60px" class="btn btn-outline-danger btn-sm" href="<c:url value='/delete-user-${user.ssoId}' />">Delete</a>
+                                <a style="width:60px" class="btn btn-outline-danger btn-sm" href="<c:url value='/delete-${user.ssoId}' />">Delete</a>
                             </div>
                         </div>
                     </td>
