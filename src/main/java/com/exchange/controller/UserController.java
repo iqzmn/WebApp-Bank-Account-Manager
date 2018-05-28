@@ -243,9 +243,9 @@ public class UserController {
     }
 
     /**
-     * This method will delete an user by it's SSOID value.
+     * This method will delete user by it's SSOID value.
      */
-    @RequestMapping(value = { "/delete-{ssoId}" }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/delete-admin-{ssoId}" }, method = RequestMethod.GET)
     public String deleteUser(@PathVariable String ssoId) {
 
         userService.deleteUserBySSO(ssoId);

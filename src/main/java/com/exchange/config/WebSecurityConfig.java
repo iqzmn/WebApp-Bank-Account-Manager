@@ -46,8 +46,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
                 http.authorizeRequests()
-                .antMatchers("/user**", "/delete-user-*").hasRole("USER")
-                .antMatchers("/admin**", "/edit-user-*", "/delete-*").hasRole("ADMIN")
+                .antMatchers("/user**", "/user-edit-*", "/delete-user-*").hasRole("USER")
+                .antMatchers("/admin**", "/edit-user-*", "/delete-admin-*").hasRole("ADMIN")
                 .and().formLogin().successHandler(successHandler).loginPage("/").loginProcessingUrl("/login").usernameParameter("ssoId").passwordParameter("password")
                 .and().logout().logoutUrl("/logout").logoutSuccessUrl("/").invalidateHttpSession(true).clearAuthentication(true).deleteCookies("JSESSIONID")
                 .and().rememberMe().rememberMeParameter("remember-me").tokenRepository(tokenRepository).tokenValiditySeconds(86400)
