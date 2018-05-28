@@ -245,9 +245,15 @@ public class UserController {
     /**
      * This method will delete an user by it's SSOID value.
      */
-    @RequestMapping(value = { "/delete-user-{ssoId}" }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/delete-{ssoId}" }, method = RequestMethod.GET)
     public String deleteUser(@PathVariable String ssoId) {
+
         userService.deleteUserBySSO(ssoId);
+
+        if(ssoId.equals(getPrincipal())){
+            SecurityContextHolder.getContext().setAuthentication(null);
+            return "accessDenied";
+        }else
 
         return "redirect:/admin";
     }
