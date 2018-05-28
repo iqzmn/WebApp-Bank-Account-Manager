@@ -35,7 +35,6 @@
             <artifactId>spring-web</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
@@ -54,7 +53,6 @@
             <artifactId>spring-tx</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -87,7 +85,6 @@
             <artifactId>spring-security-taglibs</artifactId>
             <version>5.0.3.RELEASE</version>
         </dependency>
-
 
         <!--Hibernate 5 dependencies-->
         <dependency>
@@ -140,6 +137,7 @@
             <artifactId>jstl</artifactId>
             <version>${jstl-version}</version>
         </dependency>
+
         <!-- JUnit -->
         <dependency>
             <groupId>junit</groupId>
@@ -151,6 +149,7 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.0.0</version>
         </dependency>
+
         <!--Compatibility with Java 9 version-->
         <dependency>
             <groupId>javax.xml.bind</groupId>
@@ -203,8 +202,16 @@
             <version>2.9.4</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.heroku.sdk/heroku-maven-plugin -->
+        <dependency>
+            <groupId>com.heroku.sdk</groupId>
+            <artifactId>heroku-maven-plugin</artifactId>
+            <version>2.0.4</version>
+        </dependency>
+
     </dependencies>
-  <build>
+
+<!--  <build>
     <finalName>banker</finalName>
       <plugins>
           <plugin>
@@ -215,6 +222,25 @@
               </configuration>
           </plugin>
       </plugins>
-  </build>
-
+  </build>-->
+<build>
+<plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+            <source>${java.version}</source>
+            <target>${java.version}</target>
+        </configuration>
+        <dependencies>
+            <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm</artifactId>
+                <version>6.2</version> <!-- Use newer version of ASM -->
+            </dependency>
+        </dependencies>
+    </plugin>
+</plugins>
+</build>
 </project>
