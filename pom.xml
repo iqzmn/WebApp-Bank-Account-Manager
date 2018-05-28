@@ -7,7 +7,7 @@
   <artifactId>banker</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-    <name>banker Maven Webapp</name>
+    <name>Webapp account manager</name>
     <url>http://maven.apache.org</url>
     <properties>
         <spring.version>5.0.4.RELEASE</spring.version>
