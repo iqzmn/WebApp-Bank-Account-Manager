@@ -33,7 +33,23 @@ CREATE TABLE `app_user` (
   `email` varchar(30) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `sso_id` (`sso_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
+```
+
+```sql
+CREATE TABLE `user_profile` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `type` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `type` (`type`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+```
+
+```sql
+INSERT INTO USER_PROFILE(type)
+VALUES ('USER');
+INSERT INTO USER_PROFILE(type)
+VALUES ('ADMIN');
 ```
 
 ```sql
@@ -44,7 +60,7 @@ CREATE TABLE `app_user_user_profile` (
   KEY `FK_USER_PROFILE` (`user_profile_id`),
   CONSTRAINT `FK_APP_USER` FOREIGN KEY (`user_id`) REFERENCES `app_user` (`id`),
   CONSTRAINT `FK_USER_PROFILE` FOREIGN KEY (`user_profile_id`) REFERENCES `user_profile` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
 ```sql
@@ -54,7 +70,7 @@ CREATE TABLE `persistent_logins` (
   `token` varchar(64) NOT NULL,
   `last_used` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`series`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
 ```sql
@@ -67,7 +83,7 @@ CREATE TABLE `user_account` (
   PRIMARY KEY (`id`),
   KEY `amount_user` (`user_id`),
   CONSTRAINT `amount_user` FOREIGN KEY (`user_id`) REFERENCES `app_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=148 DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=148 DEFAULT CHARSET=utf8;
 ```
 
 ```sql
@@ -80,21 +96,5 @@ CREATE TABLE `user_avatar` (
   PRIMARY KEY (`id`),
   KEY `avatar_user` (`user_id`),
   CONSTRAINT `avatar_user` FOREIGN KEY (`user_id`) REFERENCES `app_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8
-```
-
-```sql
-CREATE TABLE `user_profile` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `type` varchar(30) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `type` (`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8
-```
-
-```sql
-INSERT INTO USER_PROFILE(type)
-VALUES ('USER');
-INSERT INTO USER_PROFILE(type)
-VALUES ('ADMIN');
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8;
 ```
