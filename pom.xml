@@ -224,6 +224,7 @@
       </plugins>
   </build>-->
 <build>
+    <finalName>webapp</finalName>
 <plugins>
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
