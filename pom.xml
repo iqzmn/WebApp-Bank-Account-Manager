@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.exchange</groupId>
   <artifactId>banker</artifactId>
-  <packaging>war</packaging>
+  <!--<packaging>war</packaging>-->
   <version>1.0-SNAPSHOT</version>
     <name>Webapp account manager</name>
     <url>http://maven.apache.org</url>

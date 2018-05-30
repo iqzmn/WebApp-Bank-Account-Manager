@@ -1,1 +1,1 @@
-web: java -war target/webapp.war
+web: java -jar target/webapp.jar
