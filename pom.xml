@@ -226,7 +226,7 @@
 <build>
     <finalName>webapp</finalName>
 <plugins>
-    <plugin>
+<!--    <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.7.0</version>
@@ -238,10 +238,10 @@
             <dependency>
                 <groupId>org.ow2.asm</groupId>
                 <artifactId>asm</artifactId>
-                <version>6.2</version> <!-- Use newer version of ASM -->
+                <version>6.2</version> &lt;!&ndash; Use newer version of ASM &ndash;&gt;
             </dependency>
         </dependencies>
-    </plugin>
+    </plugin>-->
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
