@@ -73,7 +73,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>
-                                            <form:input type="password" path="password" class="form-control" placeholder="password" required="required"/>
+                                            <form:input type="password" path="password" class="form-control" placeholder="**pass**" required="required"/>
                                             </label>
                                         </div>
 
