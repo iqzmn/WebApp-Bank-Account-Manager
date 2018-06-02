@@ -11,7 +11,7 @@
     <link href="<c:url value='/static/css/style.css'/>" rel="stylesheet"/>
     <script src="<c:url value='/static/js/jquery-3.3.1.min.js'/>"></script>
 </head>
-<body style="background-image: url(/static/imgs/logo.png); background-size: 60%; background-repeat: no-repeat; background-position: 50% 50%">
+<body style="background-image: url(/static/imgs/logo.png); background-size: 50%; background-repeat: no-repeat; background-position: 50% 50%">
 <div class="flip form-container">
 
     <input id="flip-form-id" type="checkbox">
