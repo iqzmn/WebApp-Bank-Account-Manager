@@ -1,1 +1,1 @@
-web: java -jar target/webapp.jar
+web: java -jar target/banker.jar
