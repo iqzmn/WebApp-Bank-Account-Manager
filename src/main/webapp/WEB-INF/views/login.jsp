@@ -81,7 +81,7 @@
             </label>
 
             <label class="field">
-                <form:input type="password" path="password" id="password" placeholder="*******" required="required" class="field_input"/>
+                <form:input type="password" path="password" id="password" placeholder="password" required="required" class="field_input"/>
             </label>
 
             <label class="field">
